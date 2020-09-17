@@ -93,7 +93,7 @@ model = Model(
     batch_metrics=metrics
 )
 
-    ####################数据测试################################
+    ###################################################
     
 checkname=os.path.join(MODEL_DIR+'/'+args.model+'.pth')
 model.load_optimizer_state(checkname)#get the checkpoint model to predict
@@ -111,13 +111,9 @@ if args.model=="vtcnn":
     ##########realize the single sample prediction############
 if args.model=="mrresnet":
     
-    outmodel=model.load_weights(checkname)
+    outmodel=model.load_weights(checkname)## it seems not work
 
-    
-
-    model.to(DEVICE)
-    with torch.no_grad():
-        out = model(s1)
+   
 
     
 ################################################################################
