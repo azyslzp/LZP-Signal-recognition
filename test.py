@@ -1,10 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Thu Sep 17 14:54:43 2020
-
-@author: Liuzp
-"""
-
 import os
 import argparse
 import numpy as np
